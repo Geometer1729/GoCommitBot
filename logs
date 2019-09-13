@@ -1,0 +1,3 @@
+
+Geometer:  test
+	Message {messageId = 621833221163712521, messageChannel = 486580637139075082, messageAuthor = User {userId = 283006687412224001, userName = "Geometer", userDiscrim = "7459", userAvatar = Just "2235e9e04317742bd9e3e0355878eb15", userIsBot = False, userIsWebhook = False, userMfa = Nothing, userVerified = Nothing, userEmail = Nothing}, messageText = "!suggestion test", messageTimestamp = 2019-09-12 22:23:13.028 UTC, messageEdited = Nothing, messageTts = False, messageEveryone = False, messageMentions = [], messageMentionRoles = [], messageAttachments = [], messageEmbeds = [], messageNonce = Just 621833335445913600, messagePinned = False, messageGuild = Just 486580570948894741}

@@ -19,7 +19,7 @@ executable goComit
   main-is:             GoComit.hs
   -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4, discord-haskell, mtl, random, text
+  build-depends:       base >=4, discord-haskell, mtl, random, text , process
   hs-source-dirs:      src
   default-language:    Haskell2010
 

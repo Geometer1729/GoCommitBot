@@ -1,5 +1,5 @@
 module Phrase where
-
+ 
 import Control.Monad
 import Control.Monad.State
 import Data.Char
@@ -87,6 +87,23 @@ liftRand r = do
   
 basic :: [String] -> Template
 basic = Choice . map JT
+
+scold :: Template
+scold = Join [ basic [
+    "fuck you uwu bot you degenerate"
+  , ":b:urn in hek you gosh darn"
+  , "good god uwubot you are such a"
+  , "If I had a nickle for every time you were a shitty bot I'd have a nickle, you"
+  ] , basic [
+    "shity bot"
+  , "terri:b:le :b:ot"
+  , "worthless :b:ot"
+  , "fucking abomination"
+  , "jerk-faced bot"
+  , "reason my source code has to have a speciall case cause you respond to fucking everything"
+  , "mother heker"
+  ] , JT ". Why don't you just commit" , sudoku , JT "already?" ]
+
 
 wisdom :: Template
 wisdom = Modifiers [bify] $ Choice [

@@ -5,8 +5,21 @@ import Control.Monad.State
 import Data.Char
 import System.Random
 
-
 type Rand = State StdGen
+
+clean :: String -> Rand String
+clean = return . fixCap . puncFix
+
+fixCap :: String -> String
+fixCap s = (toUpper . head) s : (tail s)
+
+puncFix :: String -> String
+puncFix w = let ws = words w in unwords $ if isPunc (last ws) then ((init . init) ws) ++ [concat [(last (init ws)),(last ws)]] else ws
+
+isPunc :: String -> Bool
+isPunc "!" = True
+isPunc "?" = True
+isPunc _ = False
 
 sponge :: String -> Rand String
 sponge = mapM spongeChar
@@ -106,7 +119,7 @@ scold = Join [ basic [
 
 
 wisdom :: Template
-wisdom = Modifiers [bify] $ Choice [
+wisdom = Modifiers [clean,bify] $ Choice [
    Join [ JT "this is so" , adj , Choice [
      JT "alexa play despacito!"
     ,JT "can we live in a soceity?"
